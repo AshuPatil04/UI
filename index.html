@@ -1,0 +1,72 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ocean Media Assistant</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <!-- Add Font Awesome for the user icon -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <!-- LOGIN PAGE -->
+  <div class="login-page" id="loginPage">
+    <div class="login-box">
+      <img src="/assets/images/logo-light.svg" alt="Logo" class="logo" />
+      <h2>Welcome to Ocean Media</h2>
+      <input type="email" id="email" placeholder="Email" />
+      <input type="password" id="password" placeholder="Password" />
+      <button onclick="handleLogin()">Login</button>
+    </div>
+  </div>
+
+  <!-- DASHBOARD -->
+  <div class="dashboard hidden" id="dashboard">
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <img src="/assets/images/logo-light.svg" alt="Logo" />
+      </div>
+      
+      <div class="sidebar-nav">
+        <button onclick="showHistory()">History</button>
+        <button onclick="signOut()">Sign Out</button>
+      </div>
+    </div>
+    
+    <div class="chat-section">
+      <div class="user-profile">
+        <div class="profile-icon">
+            <i class="fas fa-user-circle profile-icon"></i>
+
+        </div>
+   
+        
+        <!-- Dropdown Menu -->
+        <div class="profile-options hidden">
+            <button class="option-btn" onclick="goToSettings()">Settings</button>
+            <button class="option-btn" onclick="Upgrade()">Upgrade Plan</button>
+        </div>
+    </div>
+    
+
+      <div class="chat-header">Ocean Media Assistant</div>
+
+      <div class="chat-area" id="chatArea">
+        <!-- Centered "How can I help you?" message -->
+        <div class="system-message">
+          <p>How can I help you?</p>
+        </div>
+      </div>
+
+      <div class="chat-input">
+        <input type="text" id="userInput" placeholder="Ask something..." />
+        <button onclick="sendMessage()">Send</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

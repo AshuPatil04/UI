@@ -1,0 +1,425 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(to bottom right, #007BFF, #00C6FF);
+}
+
+/* LOGIN PAGE */
+.login-page {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    padding: 20px;
+}
+
+.login-box {
+    background: linear-gradient(135deg, #005AA7, #00C6FB);
+    padding: 40px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    width: 100%;
+    max-width: 400px;
+    transition: transform 0.3s ease;
+}
+
+.login-box .logo {
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.login-box h2 {
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.login-box input {
+    width: 100%;
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.login-box button {
+    width: 100%;
+    margin-top: 15px;
+    padding: 14px;
+    background-color: #1b528d;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.login-box button:hover {
+    background-color: #4380bc;
+}
+
+/* DASHBOARD */
+.hidden {
+    display: none;
+}
+
+.dashboard {
+    display: flex;
+    height: 100vh;
+    flex-direction: row;
+    background: #F2F6FA;
+    overflow: hidden;
+}
+
+/* USER PROFILE */
+.user-profile {
+    position: fixed;
+    top: 10px; /* FIXED alignment issue */
+    right: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.profile-icon {
+    font-size: 40px;
+    color: #fff;
+    margin-right: 10px;
+}
+
+/* User Profile Dropdown */
+.profile-options {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #333;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    width: 150px;
+    padding: 10px 0;
+}
+
+.profile-options .option-btn {
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s;
+    border-bottom: 1px solid #444;
+}
+
+.profile-options .option-btn:last-child {
+    border-bottom: none;
+}
+
+.profile-options .option-btn:hover {
+    background-color: #444;
+}
+
+.profile-options.show {
+    display: block;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 250px;
+    background: #003f5c;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 4px 0 8px rgba(0,0,0,0.1);
+    height: 100%;
+    position: relative; /* make sure sidebar is relative */
+
+}
+
+.sidebar-header {
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid #005377;
+}
+
+.sidebar-header img {
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+.sidebar-header h3 {
+    color: #ffffff;
+    font-weight: normal;
+}
+
+.sidebar-nav {
+    flex-grow: 1;
+  
+    padding: 20px;
+}
+
+  
+  .sidebar-nav {
+    position: absolute;
+    bottom: 20px; /* distance from bottom */
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+  
+.sidebar-nav button {
+   
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+    font-size: 16px;
+    text-align: left;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.sidebar-nav button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* CHAT SECTION */
+.chat-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: #eaf4fc;
+    height: 100%;
+}
+
+.chat-header {
+    padding: 20px;
+    background: #007BFF;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Chat Area Styling */
+.chat-area {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f1f1f1;
+    height: 400px;
+    overflow-y: auto;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Styling for the system's welcome message */
+.system-message {
+    background-color: #e0e0e0;
+    padding: 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    color: #333;
+    font-size: 1.5rem;
+}
+
+/* General Chat Section Styling */
+.chat-input {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.chat-input input {
+    width: 85%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.chat-input button {
+    width: 12%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Hide the dashboard by default */
+.dashboard.hidden {
+    display: none;
+}
+
+/* For chat message types */
+.chat-area {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.message {
+    margin: 10px 0;
+    max-width: 70%;
+    padding: 14px;
+    border-radius: 16px;
+    font-size: 16px;
+    line-height: 1.4;
+    transition: all 0.3s;
+}
+
+.user {
+    align-self: flex-end;
+    background: #c3f7ca;
+}
+
+.bot {
+    align-self: flex-start;
+    background: #ffffff;
+}
+
+/* INPUT */
+.chat-input {
+    display: flex;
+    padding: 12px;
+    background: white;
+    border-top: 1px solid #ccc;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.chat-input button {
+    margin-left: 10px;
+    padding: 12px 20px;
+    background: #00C6FF;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.chat-input button:hover {
+    background: #00aaff;
+}
+
+button:disabled {
+    background: #95a5a6;
+    cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dashboard {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        flex-direction: row;
+        overflow-x: auto;
+        height: auto;
+    }
+
+    .sidebar-nav {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .chat-area {
+        padding: 10px;
+    }
+
+    .login-box {
+        padding: 20px;
+        width: 100%;
+    }
+
+    .login-box h2 {
+        font-size: 18px;
+    }
+
+    .login-box input, .login-box button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .chat-input input, .chat-input button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .user-profile {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-box {
+        padding: 15px;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+    }
+
+    .sidebar-nav button {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    .chat-input input {
+        font-size: 14px;
+    }
+
+    .chat-area {
+        padding: 15px;
+    }
+
+    .user-profile {
+        display: none;
+    }
+}
