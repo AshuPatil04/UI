@@ -86,7 +86,7 @@ body {
 /* USER PROFILE */
 .user-profile {
     position: fixed;
-    top: 10px; /* FIXED alignment issue */
+    top: 10px;
     right: 20px;
     display: flex;
     align-items: center;
@@ -107,7 +107,6 @@ body {
     margin-right: 10px;
 }
 
-/* User Profile Dropdown */
 .profile-options {
     display: none;
     position: absolute;
@@ -155,8 +154,7 @@ body {
     flex-direction: column;
     box-shadow: 4px 0 8px rgba(0,0,0,0.1);
     height: 100%;
-    position: relative; /* make sure sidebar is relative */
-
+    position: relative;
 }
 
 .sidebar-header {
@@ -177,24 +175,18 @@ body {
 
 .sidebar-nav {
     flex-grow: 1;
-  
     padding: 20px;
-}
-
-  
-  .sidebar-nav {
     position: absolute;
-    bottom: 20px; /* distance from bottom */
+    bottom: 20px;
     left: 0;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 10px;
-  }
-  
+}
+
 .sidebar-nav button {
-   
     width: 100%;
     padding: 14px;
     margin-bottom: 10px;
@@ -230,21 +222,16 @@ body {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-/* Chat Area Styling */
 .chat-area {
-    margin-top: 20px;
+    flex: 1;
     padding: 20px;
-    background-color: #f1f1f1;
-    height: 400px;
     overflow-y: auto;
-    border-radius: 10px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    flex-direction: column;
+    background-color: #f1f1f1;
+    border-radius: 10px;
 }
 
-/* Styling for the system's welcome message */
 .system-message {
     background-color: #e0e0e0;
     padding: 20px;
@@ -252,44 +239,7 @@ body {
     font-weight: bold;
     color: #333;
     font-size: 1.5rem;
-}
-
-/* General Chat Section Styling */
-.chat-input {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-}
-
-.chat-input input {
-    width: 85%;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-.chat-input button {
-    width: 12%;
-    padding: 10px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-/* Hide the dashboard by default */
-.dashboard.hidden {
-    display: none;
-}
-
-/* For chat message types */
-.chat-area {
-    flex: 1;
-    padding: 20px;
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
+    text-align: center;
 }
 
 .message {
@@ -312,12 +262,13 @@ body {
     background: #ffffff;
 }
 
-/* INPUT */
 .chat-input {
     display: flex;
     padding: 12px;
     background: white;
     border-top: 1px solid #ccc;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .chat-input input {
@@ -329,7 +280,6 @@ body {
 }
 
 .chat-input button {
-    margin-left: 10px;
     padding: 12px 20px;
     background: #00C6FF;
     color: white;
@@ -363,9 +313,16 @@ button:disabled {
     }
 
     .sidebar-nav {
-        display: flex;
         flex-direction: row;
-        gap: 10px;
+        justify-content: space-around;
+        padding: 10px;
+        position: static;
+    }
+
+    .sidebar-nav button {
+        font-size: 14px;
+        padding: 10px;
+        flex: 1;
     }
 
     .chat-area {
@@ -381,12 +338,14 @@ button:disabled {
         font-size: 18px;
     }
 
-    .login-box input, .login-box button {
+    .login-box input,
+    .login-box button {
         font-size: 14px;
         padding: 10px;
     }
 
-    .chat-input input, .chat-input button {
+    .chat-input input,
+    .chat-input button {
         font-size: 14px;
         padding: 10px;
     }
@@ -404,6 +363,14 @@ button:disabled {
     .sidebar {
         width: 100%;
         height: auto;
+        flex-direction: column;
+    }
+
+    .sidebar-nav {
+        display: none;
+        /* flex-direction: column;
+        align-items: stretch;
+        padding: 10px; */
     }
 
     .sidebar-nav button {
@@ -417,6 +384,14 @@ button:disabled {
 
     .chat-area {
         padding: 15px;
+    }
+
+    .chat-input {
+        flex-direction: column;
+    }
+
+    .chat-input button {
+        width: 100%;
     }
 
     .user-profile {
